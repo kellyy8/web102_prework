@@ -172,3 +172,15 @@ const {name: name2, ...rest2} = secondGame;
 const secondGameElement = document.createElement("p");
 secondGameElement.innerHTML = name2;
 secondGameContainer.append(secondGameElement);
+
+/************************************************************************************
+ * Bonus customizations: Navbar (not sticky though :()
+ */
+
+const statsButton = document.getElementsByClassName("nav-button")[0];
+const statsHeader = document.getElementById("stats-header");
+statsButton.addEventListener("click", () => {statsHeader.scrollIntoView();});
+
+const gamesButton = document.getElementsByClassName("nav-button")[1];
+const gamesHeader = document.getElementById("games-header");
+gamesButton.addEventListener("click", () => {gamesHeader.scrollIntoView();});
