@@ -9,6 +9,10 @@ button, p {
     font-size: 18px;
 }
 
+button {
+    cursor: pointer;
+}
+
 #tentacles {
     width: 50px;
 }
