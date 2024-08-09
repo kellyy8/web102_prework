@@ -132,14 +132,12 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
-const fundedGames = GAMES_JSON.filter((game) => {return game.pledged >= game.goal;});
-const numRaisedForFunded = fundedGames.reduce((acc, game) => {return acc + game.pledged;}, 0);
-const numFunded = fundedGames.length;
-const numUnfunded = GAMES_JSON.length - fundedGames.length;
+const totalRaised = GAMES_JSON.reduce((acc, game) => {return acc + game.pledged;}, 0);
+const numUnfunded = GAMES_JSON.reduce((acc, game) => {if(game.pledged < game.goal){return acc + 1;} else{return acc;}}, 0);
 
 // create a string that explains the number of unfunded games using the ternary operator
 const displayStr = `
-        ${(numFunded != 0) ? `A total of $${numRaisedForFunded.toLocaleString("en-US")} has been raised for ${numFunded} games. ` : "We're so close to funding our first game!" }
+        ${(numUnfunded != GAMES_JSON.length) ? `A total of $${totalRaised.toLocaleString("en-US")} has been raised for ${GAMES_JSON.length} games. ` : "We're so close to funding our first game!" }
         ${(numUnfunded == 0) ? "Thank you for all your help!" : `Currently, ${numUnfunded} games remain unfunded and need your help!`}
     `;
 
