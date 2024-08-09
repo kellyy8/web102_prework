@@ -139,8 +139,8 @@ const numUnfunded = GAMES_JSON.length - fundedGames.length;
 
 // create a string that explains the number of unfunded games using the ternary operator
 const displayStr = `
-        ${(numFunded != 0) ? `A total of $${numRaisedForFunded.toLocaleString("en-US")} has been raised for ${numUnfunded} games. ` : "We're so close to funding the first game!" }
-        ${(numUnfunded == 0) ? "Thank you for all your help!" : `Currently, ${GAMES_JSON.length - numUnfunded} games remain unfunded and need your help!`}
+        ${(numFunded != 0) ? `A total of $${numRaisedForFunded.toLocaleString("en-US")} has been raised for ${numFunded} games. ` : "We're so close to funding our first game!" }
+        ${(numUnfunded == 0) ? "Thank you for all your help!" : `Currently, ${numUnfunded} games remain unfunded and need your help!`}
     `;
 
 // create a new DOM element containing the template string and append it to the description container
