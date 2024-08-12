@@ -27,7 +27,7 @@ Here's a walkthrough of implemented features:
 
 <img src='./Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [Adode Express](https://www.adobe.com/express/).
+GIF created with [Kap](https://getkap.co/).
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
